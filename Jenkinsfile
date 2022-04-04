@@ -3,7 +3,7 @@ agent any
     stages {
         stage('Build') {
             steps {
-                sh "docker build -t teeeeeest -f dockerfile ."
+                sh "docker build -t bankTest -f dockerfile ."
             }
         }
         stage('Integration Test') {
