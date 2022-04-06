@@ -9,7 +9,7 @@ USER appuser
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /BANK
-COPY ["bankTest.csproj", "./"]
+COPY ["./bankTest.csproj", "./"]
 RUN dotnet restore "bankTest.csproj"
 COPY . .
 WORKDIR "/BANK/."
