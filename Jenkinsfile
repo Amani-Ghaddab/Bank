@@ -3,7 +3,7 @@ agent any
     stages {
         stage('Build') {
              steps {
-                    sh "docker build -t teeeeeest -f dockerfile ."
+                    sh "docker build -t teeeeeest -f ./bankTest/dockerfile ."
                     }
         }
         stage('Integration Test') {
@@ -11,8 +11,6 @@ agent any
                 sh "docker-compose -f docker-compose.yml"
                 }
         }
-        
-
         
     }
 }
