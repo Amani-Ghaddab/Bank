@@ -8,6 +8,7 @@ agent any
         }
         stage('Integration Test') {
             steps {
+                sh "apt install docker-compose"
                 sh "docker-compose -f docker-compose.yml"
                 }
         }
