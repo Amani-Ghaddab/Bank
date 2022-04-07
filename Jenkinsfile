@@ -3,8 +3,8 @@ agent any
     stages {
         stage('Build') {
              steps {
-                    sh" sudo usermod -a -G docker jenkins"
-                    sh "docker build -t teeeeeest -f ./bankTest/dockerfile ."
+                  
+                    sh "sudo docker build -t teeeeeest -f ./bankTest/dockerfile ."
                     }
         }
         stage('Integration Test') {
